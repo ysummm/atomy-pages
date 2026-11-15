@@ -46,11 +46,18 @@ h2 small{font-family:var(--ui);font-weight:500;font-size:9pt;color:var(--ink-3);
 
 /* 이런 날 */
 .days{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm}
-.day{border-radius:3mm;background:var(--sun-soft);padding:3.8mm 4.5mm 3.5mm;position:relative}
-.day svg{width:9mm;height:9mm;stroke:var(--sun-deep);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.day h3{font-family:var(--ui);font-size:11.5pt;font-weight:700;margin-top:2mm;line-height:1.35}
-.day p{font-size:9.8pt;color:var(--ink-2);margin-top:1mm;line-height:1.5}
+.day{border-radius:3mm;background:var(--sun-soft);padding:3.4mm 4mm;position:relative;display:grid;grid-template-columns:8mm 1fr;column-gap:2.5mm;align-items:center}
+.day svg{grid-row:span 2;width:8mm;height:8mm;stroke:var(--sun-deep);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.day h3{font-family:var(--ui);font-size:10.8pt;font-weight:700;line-height:1.35}
+.day p{font-size:9.3pt;color:var(--ink-2);margin-top:.4mm;line-height:1.45}
 
+.why{margin-top:5mm}
+.whys{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.3px solid var(--ink);border-bottom:1px solid var(--line)}
+.whys div{padding:3.2mm 4mm 3.4mm;border-right:1px solid var(--line)}
+.whys div:last-child{border-right:none;background:var(--sun-soft)}
+.whys b{font-family:var(--ui);font-size:8.5pt;font-weight:700;color:var(--sun-deep);letter-spacing:.08em}
+.whys h3{font-family:var(--ui);font-size:11pt;font-weight:700;margin-top:.8mm}
+.whys p{font-size:9.6pt;color:var(--ink-2);line-height:1.5;margin-top:.8mm}
 /* 숫자 */
 .nums{display:grid;grid-template-columns:repeat(4,1fr);margin-top:5mm;border-top:1.3px solid var(--ink);border-bottom:1px solid var(--line)}
 .num{padding:3mm 2mm 2.8mm;text-align:center;border-right:1px solid var(--line)}
@@ -112,6 +119,7 @@ h2 small{font-family:var(--ui);font-weight:500;font-size:9pt;color:var(--ink-3);
   .num:nth-child(2){border-right:none}
   .num:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .row{grid-template-columns:1fr;gap:7mm}
+  .whys{grid-template-columns:1fr}.whys div{border-right:none;border-bottom:1px solid var(--line)}
   .cta{grid-template-columns:1fr;margin-top:8mm}
   .cta .price{text-align:left}
 }
@@ -137,29 +145,31 @@ h2 small{font-family:var(--ui);font-weight:500;font-size:9pt;color:var(--ink-3);
       <div class="days">
         <div class="day">
           <svg viewBox="0 0 24 24"><path d="M8 3v5a4 4 0 0 1-8 0"/><path d="M4 12v9M2 21h4"/><path d="M14 3h8l-1 7a3 3 0 0 1-6 0z"/><path d="M18 13v8M16 21h4"/></svg>
-          <h3>회식·모임이 있는 날</h3><p>잘 먹고 즐긴 저녁, 가방 속 한 포</p>
+          <h3>회식·모임이 있는 날</h3><p>즐긴 저녁, 가방 속 한 포</p>
         </div>
         <div class="day">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l2.5 1.5M9 2h6"/></svg>
-          <h3>점심을 든든히 먹은 날</h3><p>오후 일 시작 전, 물 없이 한 포</p>
+          <h3>점심을 든든히 먹은 날</h3><p>오후 시작 전, 물 없이 한 포</p>
         </div>
         <div class="day">
           <svg viewBox="0 0 24 24"><path d="M3 11h18l-1.5 9h-15z"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          <h3>바깥 음식이 잦은 주</h3><p>배달·외식이 이어질 때 매일 한 포</p>
+          <h3>바깥 음식이 잦은 주</h3><p>배달·외식이 이어질 때</p>
         </div>
       </div>
     </section>
 
-    <div class="nums rise">
-      <div class="num"><div class="n">11<span>종</span></div><div class="l">식물 유래 효소</div></div>
-      <div class="num"><div class="n">30<span>%</span></div><div class="l">동결건조<br>파인애플 분말</div></div>
-      <div class="num"><div class="n">3<span>종</span></div><div class="l">조효소<br>비타민 B1·B5·B7</div></div>
-      <div class="num"><div class="n">2<span>g</span></div><div class="l">파인애플 맛<br>분말 스틱</div></div>
-    </div>
+    <section class="why rise">
+      <h2>왜 효소일까요? <small>효소에 대한 일반 설명이며, 제품의 효능이 아닙니다</small></h2>
+      <div class="whys">
+        <div><b>01</b><h3>효소는 몸속 일꾼</h3><p>효소는 음식을 잘게 나누는 일을 하는 단백질입니다.</p></div>
+        <div><b>02</b><h3>효소는 열에 약합니다</h3><p>익히고 가공한 음식에는 식품 속 효소가 거의 남지 않습니다.</p></div>
+        <div><b>03</b><h3>그래서 한 포</h3><p>익힌 음식이 많은 식탁에 식물 유래 효소를 간편하게.</p></div>
+      </div>
+    </section>
 
     <div class="row rise">
       <section>
-        <h2>담긴 효소 11종 <small>역가 수치 표기</small></h2>
+        <h2>담긴 효소 11종 <small>파인애플 분말 30% · 조효소 B1·B5·B7</small></h2>
         <div class="chips">
           <span class="chip">α-아밀라아제</span><span class="chip">글루코아밀라아제</span><span class="chip">프로테아제</span><span class="chip">리파아제</span><span class="chip">셀룰라아제</span><span class="chip">락타아제</span><span class="chip">인베르타아제</span><span class="chip">갈락토시다아제</span><span class="chip">펙티나아제</span><span class="chip">브로멜라인</span><span class="chip">파파인</span>
         </div>
