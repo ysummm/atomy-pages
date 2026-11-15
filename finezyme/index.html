@@ -4,15 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta property="og:type" content="website">
-<meta property="og:title" content="애터미 파인자임 · 한 장 소개">
-<meta property="og:description" content="식물 유래 효소 11종을 하루 한 포에 · 30포 1개월분">
+<meta property="og:title" content="애터미 파인자임 · 하루 한 포, 효소 11종">
+<meta property="og:description" content="30포 1개월분 17,800원 · 하루 593원">
+<meta property="og:image" content="https://image.atomy.com/KR/goods/000129/2c7b5841-6962-42b2-9254-702d63ed8c66.jpg?w=1360&h=1360">
 <title>애터미 파인자임 한 장 소개</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;600;700&family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
 <style>
-/* 제품 한 장 소개 · A4 · 디자인 기준 v0.1 */
+/* 소비자용 제품 한 장 · A4 · 디자인 기준 v0.1 + 제품 색(파인애플 노랑) */
 :root{
   --paper:#fff;--ink:#1c1917;--ink-2:#57534e;--ink-3:#a8a29e;--line:#e7e5e4;--wash:#fafaf9;
-  --teal:#0f766e;--teal-soft:#f0fdfa;--gold:#a57a12;--gold-soft:#fdf8ec;--gold-line:#ecd9a6;
+  --teal:#0f766e;--teal-soft:#f0fdfa;
+  --sun:#f4c430;--sun-deep:#a57a12;--sun-soft:#fdf6dc;--sun-line:#f1dc94;--cream:#f8edc6;
   --display:"Hahmlet","Gowun Batang",serif;
   --body:"Gowun Dodum","IBM Plex Sans KR","Malgun Gothic",sans-serif;
   --ui:"IBM Plex Sans KR","Malgun Gothic",sans-serif;
@@ -21,153 +23,185 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#e7e5e4}
 body{word-break:keep-all;font-family:var(--body);color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.page{width:210mm;height:297mm;margin:0 auto;background:var(--paper);padding:15mm 17mm 10mm;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.page::before{content:"";position:absolute;inset:0 0 auto 0;height:5mm;background:var(--teal)}
-.page::after{content:"";position:absolute;top:5mm;left:0;right:0;height:1.2mm;background:var(--gold-line)}
+.page{width:210mm;height:297mm;margin:0 auto;background:var(--paper);display:flex;flex-direction:column;position:relative;overflow:hidden}
 
-header{display:grid;grid-template-columns:1fr auto;gap:8mm;align-items:end;padding-bottom:5mm;border-bottom:1px solid var(--line)}
-.eyebrow{font-family:var(--ui);font-size:9pt;font-weight:600;letter-spacing:.14em;color:var(--teal)}
-h1{font-family:var(--display);font-weight:600;font-size:30pt;line-height:1.2;letter-spacing:-.02em;margin-top:2.5mm}
-h1 small{display:block;font-family:var(--ui);font-size:10pt;font-weight:500;letter-spacing:.18em;color:var(--ink-3);margin-top:1.5mm}
-.tagline{font-family:var(--display);font-weight:500;font-size:14pt;color:var(--ink-2);margin-top:3.5mm}
-.pine{width:26mm;height:30mm}
-.pine .leaf{fill:none;stroke:var(--teal);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
-.pine .body{fill:var(--gold-soft);stroke:var(--gold);stroke-width:2}
-.pine .grid{fill:none;stroke:var(--gold);stroke-width:1;opacity:.5}
+/* 첫 화면 — 사진과 한 줄 */
+.hero{position:relative;flex-shrink:0;background:var(--cream);display:grid;grid-template-columns:1fr 82mm;align-items:center;gap:4mm;padding:8mm 0 7mm 16mm;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.4mm;background:var(--sun)}
+.brand{font-family:var(--ui);font-size:9pt;font-weight:700;letter-spacing:.16em;color:var(--sun-deep)}
+.hero h1{font-family:var(--display);font-weight:700;font-size:28pt;line-height:1.24;letter-spacing:-.03em;margin-top:3mm}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%);padding:0 1mm}
+.hero .name{font-family:var(--ui);font-size:12pt;font-weight:600;margin-top:5mm}
+.hero .name small{display:block;font-weight:500;font-size:9.5pt;color:var(--ink-2);margin-top:1mm}
+.hero .photo{position:relative;height:80mm}
+.hero .photo img{position:absolute;right:0;top:50%;transform:translateY(-50%);width:82mm;height:82mm;object-fit:cover;border-radius:4mm 0 0 4mm}
+.daily{position:absolute;left:-10mm;bottom:-2mm;width:34mm;height:34mm;border-radius:50%;background:var(--ink);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 3mm 8mm rgb(0 0 0/.18);z-index:2}
+.daily .s{font-family:var(--ui);font-size:8.5pt;font-weight:500;opacity:.8}
+.daily .b{font-family:var(--ui);font-size:19pt;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--sun)}
+.daily .b small{font-size:10pt;color:#fff;margin-left:.4mm}
 
-.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:3.5mm;margin-top:5.5mm}
-.num{border:1px solid var(--line);border-radius:2mm;padding:3.8mm 3mm 3.4mm;text-align:center}
-.num .n{font-family:var(--ui);font-weight:700;font-size:24pt;line-height:1.05;color:var(--teal);font-variant-numeric:tabular-nums}
-.num .n span{font-size:12pt;font-weight:600;margin-left:.5mm}
-.num .l{font-size:10pt;color:var(--ink-2);margin-top:1.8mm;line-height:1.4}
-.num.gold{background:var(--gold-soft);border-color:var(--gold-line)}
-.num.gold .n{color:var(--gold)}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;padding:6mm 16mm 7mm}
+h2{font-family:var(--display);font-weight:600;font-size:14pt;letter-spacing:-.02em;margin-bottom:2.8mm}
+h2 small{font-family:var(--ui);font-weight:500;font-size:9pt;color:var(--ink-3);margin-left:2mm}
 
-section{margin-top:5.5mm}
-h2{font-family:var(--ui);font-size:11.5pt;font-weight:700;display:flex;align-items:center;gap:2.5mm;margin-bottom:3mm}
-h2::before{content:"";width:2.2mm;height:2.2mm;background:var(--teal);transform:rotate(45deg)}
-h2 small{font-weight:500;font-size:8.5pt;color:var(--ink-3)}
+/* 이런 날 */
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:3.5mm}
+.day{border-radius:3mm;background:var(--sun-soft);padding:3.8mm 4.5mm 3.5mm;position:relative}
+.day svg{width:9mm;height:9mm;stroke:var(--sun-deep);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.day h3{font-family:var(--ui);font-size:11.5pt;font-weight:700;margin-top:2mm;line-height:1.35}
+.day p{font-size:9.8pt;color:var(--ink-2);margin-top:1mm;line-height:1.5}
 
-.chips{display:flex;flex-wrap:wrap;gap:1.8mm}
-.chip{font-family:var(--ui);font-size:9pt;font-weight:500;background:var(--wash);border:1px solid var(--line);border-radius:10mm;padding:.8mm 3mm}
+/* 숫자 */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);margin-top:5mm;border-top:1.3px solid var(--ink);border-bottom:1px solid var(--line)}
+.num{padding:3mm 2mm 2.8mm;text-align:center;border-right:1px solid var(--line)}
+.num:last-child{border-right:none}
+.num .n{font-family:var(--ui);font-weight:700;font-size:20pt;line-height:1.05;font-variant-numeric:tabular-nums}
+.num .n span{font-size:11pt;font-weight:600;margin-left:.4mm}
+.num .l{font-size:9.5pt;color:var(--ink-2);margin-top:1.5mm;line-height:1.4}
 
-.two{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
-.box{border:1px solid var(--line);border-radius:2mm;padding:4.5mm 5mm}
-.box .k{font-family:var(--ui);font-size:8.5pt;font-weight:600;letter-spacing:.1em;color:var(--ink-3)}
-.box p{font-size:11pt;line-height:1.65;margin-top:1.5mm}
-.box b{font-family:var(--ui);font-weight:700}
-.titer{display:flex;flex-direction:column;gap:2.2mm;margin-top:2mm}
-.titer div{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--line);padding-bottom:1.5mm}
-.titer span{font-size:10.5pt;color:var(--ink-2)}
-.titer b{font-family:var(--ui);font-size:12.5pt;font-variant-numeric:tabular-nums}
+.row{display:grid;grid-template-columns:1.15fr 1fr;gap:5mm;margin-top:5mm;margin-bottom:5mm}
+.chips{display:flex;flex-wrap:wrap;gap:1.6mm}
+.chip{font-family:var(--ui);font-size:8.8pt;font-weight:500;background:var(--wash);border:1px solid var(--line);border-radius:10mm;padding:.7mm 2.6mm}
+.titer{margin-top:2.8mm;display:flex;gap:3mm}
+.titer div{flex:1;border:1px solid var(--line);border-radius:2mm;padding:2.5mm 3mm}
+.titer span{display:block;font-family:var(--ui);font-size:8pt;color:var(--ink-3);font-weight:600}
+.titer b{font-family:var(--ui);font-size:12pt;font-variant-numeric:tabular-nums}
+.titer em{font-style:normal;font-family:var(--ui);font-size:8pt;color:var(--ink-2)}
 
-.how{display:grid;grid-template-columns:auto 1fr;gap:6mm;align-items:center;padding:5mm 6mm;background:var(--teal-soft);border-left:1.2mm solid var(--teal);border-radius:0 2mm 2mm 0}
-.how .big{font-family:var(--display);font-weight:600;font-size:19pt;line-height:1.25}
-.how p{font-size:11pt;color:var(--ink-2);line-height:1.6}
+.steps{display:flex;flex-direction:column;gap:2.6mm}
+.step{display:grid;grid-template-columns:8mm 1fr;gap:3mm;align-items:center}
+.step i{font-style:normal;width:8mm;height:8mm;border-radius:50%;background:var(--ink);color:var(--sun);font-family:var(--ui);font-weight:700;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.step p{font-size:10.8pt;line-height:1.45}
+.step p b{font-family:var(--ui);font-weight:700}
 
-ul.who{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2mm 5mm}
-ul.who li{font-size:11pt;padding-left:4.5mm;position:relative}
-ul.who li::before{content:"";position:absolute;left:0;top:2.3mm;width:1.6mm;height:1.6mm;border-radius:50%;background:var(--teal)}
+/* 주문 */
+.cta{flex-shrink:0;margin-top:auto;display:grid;grid-template-columns:1fr auto;gap:6mm;align-items:center;background:var(--ink);color:#fff;border-radius:3mm;padding:5mm 7mm;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;right:-14mm;top:-14mm;width:44mm;height:44mm;border-radius:50%;background:var(--sun);opacity:.14}
+.cta .q{font-family:var(--display);font-weight:600;font-size:17pt;line-height:1.3}
+.cta .how{font-size:10pt;opacity:.82;margin-top:1.5mm}
+.cta .price{text-align:right;position:relative}
+.cta .price .won{font-family:var(--ui);font-weight:700;font-size:25pt;color:var(--sun);font-variant-numeric:tabular-nums;line-height:1.1}
+.cta .price .won small{font-size:11pt;color:#fff;margin-left:1mm}
+.cta .price .per{font-family:var(--ui);font-size:9pt;opacity:.8;margin-top:1mm}
+.cta a{color:inherit;text-decoration:none}
 
-.price{display:grid;grid-template-columns:1fr auto;gap:5mm;align-items:center;padding:4.5mm 6mm;border:1px solid var(--gold-line);background:var(--gold-soft);border-radius:2mm}
-.price .won{font-family:var(--ui);font-weight:700;font-size:20pt;font-variant-numeric:tabular-nums}
-.price .won small{font-size:10.5pt;font-weight:500;color:var(--ink-2);margin-left:2mm}
-.price .note{font-size:8.5pt;color:var(--ink-2);margin-top:1mm}
-.price .link{font-family:var(--ui);font-size:9.5pt;font-weight:600;color:var(--teal);text-align:right;line-height:1.5}
+.fine{margin-top:3mm;font-size:7.6pt;color:var(--ink-3);line-height:1.6}
+.fine b{font-family:var(--ui);font-weight:600;color:var(--ink-2)}
 
-.care{font-size:8.8pt;color:var(--ink-2);line-height:1.65}
-.care li{margin-left:4mm}
-
-footer{margin-top:auto;padding-top:3.5mm;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:6mm;font-family:var(--ui);font-size:8pt;color:var(--ink-3)}
+/* 화면용 움직임 */
+.rise{animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero h1 em{background-size:100% 100%}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
 @media screen{body{padding:10mm 0}.page{box-shadow:0 2px 12px rgb(0 0 0/.08)}}
-@media print{html,body{background:#fff}}
-@media print{.dl{display:none}}
+@media print{html,body{background:#fff}.rise{animation:none}.dl{display:none}}
 .dl{display:flex;justify-content:center;margin:6mm auto 0;max-width:210mm}
 .dl a{font-family:var(--ui);font-size:11pt;font-weight:600;color:#fff;background:var(--teal);text-decoration:none;border-radius:10mm;padding:3mm 7mm}
-@media screen and (max-width:820px){body{padding:0 0 8mm}.page{width:auto;height:auto;padding:12mm 16px 8mm;box-shadow:none}h1{font-size:23pt}.tagline{font-size:12.5pt}.pine{width:17mm;height:20mm}.nums{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.how{grid-template-columns:1fr;gap:2mm}ul.who{grid-template-columns:1fr}.price{grid-template-columns:1fr}.price .link{text-align:left}footer{flex-direction:column;gap:1mm;margin-top:6mm}}
+
+@media screen and (max-width:820px){
+  body{padding:0 0 8mm}
+  .page{width:auto;height:auto;box-shadow:none}
+  .hero{grid-template-columns:1fr;padding:10mm 16px 0;gap:6mm}
+  .hero h1{font-size:25pt}
+  .hero .photo{height:auto;margin:0 -16px}
+  .hero .photo img{position:static;transform:none;width:100%;height:auto;aspect-ratio:1;border-radius:0;display:block}
+  .daily{left:16px;bottom:16px;width:30mm;height:30mm}
+  .body{padding:8mm 16px 6mm}
+  .days{grid-template-columns:1fr}
+  .nums{grid-template-columns:1fr 1fr}
+  .num:nth-child(2){border-right:none}
+  .num:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .row{grid-template-columns:1fr;gap:7mm}
+  .cta{grid-template-columns:1fr;margin-top:8mm}
+  .cta .price{text-align:left}
+}
 </style>
 </head>
 <body>
 <div class="page">
-  <header>
-    <div>
-      <div class="eyebrow">ATOMY · 제품 한 장 소개</div>
-      <h1>애터미 파인자임<small>ATOMY FINEZYME</small></h1>
-      <div class="tagline">식물 유래 효소 11종을 하루 한 포에</div>
+  <section class="hero">
+    <div class="rise">
+      <div class="brand">ATOMY · FINEZYME</div>
+      <h1>하루 한 포로<br><em>효소 11종</em>을<br>챙기는 방법</h1>
+      <div class="name">애터미 파인자임<small>「속 편한 하루를 위한 식물 유래 효소 포뮬러」</small></div>
     </div>
-    <svg class="pine" viewBox="0 0 100 116" aria-hidden="true">
-      <path class="leaf" d="M50 40 L50 6 M50 40 L34 12 M50 40 L66 12 M50 40 L22 24 M50 40 L78 24"/>
-      <ellipse class="body" cx="50" cy="76" rx="30" ry="36"/>
-      <path class="grid" d="M28 56 L66 108 M38 44 L78 98 M24 74 L50 110 M72 56 L34 108 M62 44 L22 98 M76 74 L50 110"/>
-    </svg>
-  </header>
-
-  <div class="nums">
-    <div class="num"><div class="n">11<span>종</span></div><div class="l">식물 유래 효소</div></div>
-    <div class="num"><div class="n">30<span>%</span></div><div class="l">동결건조<br>파인애플 분말</div></div>
-    <div class="num"><div class="n">3<span>종</span></div><div class="l">조효소<br>비타민 B1·B5·B7</div></div>
-    <div class="num gold"><div class="n">1<span>포</span></div><div class="l">하루 한 번<br>2g 스틱</div></div>
-  </div>
-
-  <section>
-    <h2>들어 있는 효소 11종</h2>
-    <div class="chips">
-      <span class="chip">α-아밀라아제</span><span class="chip">글루코아밀라아제</span><span class="chip">프로테아제</span><span class="chip">리파아제</span><span class="chip">셀룰라아제</span><span class="chip">락타아제</span><span class="chip">인베르타아제</span><span class="chip">갈락토시다아제</span><span class="chip">펙티나아제</span><span class="chip">브로멜라인</span><span class="chip">파파인</span>
+    <div class="photo">
+      <img src="https://image.atomy.com/KR/goods/000129/2c7b5841-6962-42b2-9254-702d63ed8c66.jpg?w=1360&h=1360" alt="애터미 파인자임 상자와 스틱 포">
+      <div class="daily"><span class="s">하루</span><span class="b" data-count="593">593<small>원</small></span><span class="s">30포 기준</span></div>
     </div>
   </section>
 
-  <section class="two">
-    <div class="box">
-      <div class="k">효소 역가 · 1포(2g) 기준</div>
-      <div class="titer">
-        <div><span>α-아밀라아제</span><b>300,000 unit</b></div>
-        <div><span>프로테아제</span><b>1,200 unit</b></div>
+  <div class="body">
+    <section class="rise">
+      <h2>이런 날, 한 포 챙기세요</h2>
+      <div class="days">
+        <div class="day">
+          <svg viewBox="0 0 24 24"><path d="M8 3v5a4 4 0 0 1-8 0"/><path d="M4 12v9M2 21h4"/><path d="M14 3h8l-1 7a3 3 0 0 1-6 0z"/><path d="M18 13v8M16 21h4"/></svg>
+          <h3>회식·모임이 있는 날</h3><p>잘 먹고 즐긴 저녁, 가방 속 한 포</p>
+        </div>
+        <div class="day">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l2.5 1.5M9 2h6"/></svg>
+          <h3>점심을 든든히 먹은 날</h3><p>오후 일 시작 전, 물 없이 한 포</p>
+        </div>
+        <div class="day">
+          <svg viewBox="0 0 24 24"><path d="M3 11h18l-1.5 9h-15z"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>바깥 음식이 잦은 주</h3><p>배달·외식이 이어질 때 매일 한 포</p>
+        </div>
       </div>
-    </div>
-    <div class="box">
-      <div class="k">제품 정보</div>
-      <p>식품 유형 <b>효소식품</b><br>60g (2g × 30포) · 1개월분<br>제조 콜마비앤에이치 · 판매 애터미</p>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="how">
-      <div class="big">하루 1포</div>
-      <p>그대로 드시거나, 물이나 음료에 타서 드셔도 됩니다. 파인애플 맛의 분말 스틱이라 가방에 넣고 다니기 좋습니다.</p>
+    <div class="nums rise">
+      <div class="num"><div class="n">11<span>종</span></div><div class="l">식물 유래 효소</div></div>
+      <div class="num"><div class="n">30<span>%</span></div><div class="l">동결건조<br>파인애플 분말</div></div>
+      <div class="num"><div class="n">3<span>종</span></div><div class="l">조효소<br>비타민 B1·B5·B7</div></div>
+      <div class="num"><div class="n">2<span>g</span></div><div class="l">파인애플 맛<br>분말 스틱</div></div>
     </div>
-  </section>
 
-  <section>
-    <h2>이런 분께 권해 드립니다</h2>
-    <ul class="who">
-      <li>바깥 음식·기름진 음식을 자주 드시는 분</li>
-      <li>회식이나 모임이 잦은 분</li>
-      <li>탄수화물 위주로 식사하시는 분</li>
-      <li>효소를 간편하게 챙기고 싶은 분</li>
-    </ul>
-  </section>
+    <div class="row rise">
+      <section>
+        <h2>담긴 효소 11종 <small>역가 수치 표기</small></h2>
+        <div class="chips">
+          <span class="chip">α-아밀라아제</span><span class="chip">글루코아밀라아제</span><span class="chip">프로테아제</span><span class="chip">리파아제</span><span class="chip">셀룰라아제</span><span class="chip">락타아제</span><span class="chip">인베르타아제</span><span class="chip">갈락토시다아제</span><span class="chip">펙티나아제</span><span class="chip">브로멜라인</span><span class="chip">파파인</span>
+        </div>
+        <div class="titer">
+          <div><span>α-아밀라아제</span><b>300,000</b> <em>unit / 1포</em></div>
+          <div><span>프로테아제</span><b>1,200</b> <em>unit / 1포</em></div>
+        </div>
+      </section>
+      <section>
+        <h2>드시는 법</h2>
+        <div class="steps">
+          <div class="step"><i>1</i><p>하루 한 번, <b>한 포</b>를 뜯습니다.</p></div>
+          <div class="step"><i>2</i><p><b>그대로</b> 드시거나 물·음료에 타 드세요.</p></div>
+          <div class="step"><i>3</i><p>스틱이라 <b>가방·주머니</b>에 쏙 들어갑니다.</p></div>
+        </div>
+      </section>
+    </div>
 
-  <section>
-    <div class="price">
+    <div class="cta rise">
       <div>
-        <div class="won">17,800원<small>7,500 PV · 30포</small></div>
-        <div class="note">애터미 공식몰 표기 (2026-11-15 확인 · 쿠폰 적용 기준). 주문 시점에 따라 달라질 수 있습니다.</div>
+        <div class="q">한 달, 하루 한 포로<br>써 보시겠어요?</div>
+        <div class="how">주문·문의는 이 안내를 보내 드린 분께 말씀해 주세요.</div>
       </div>
-      <a class="link" href="https://kr.atomy.com/product/000129" style="text-decoration:none">공식 제품 안내<br>kr.atomy.com/product/000129</a>
+      <a class="price" href="https://kr.atomy.com/product/000129">
+        <div class="won">17,800<small>원</small></div>
+        <div class="per">30포 · 1개월분 · 하루 593원</div>
+      </a>
     </div>
-  </section>
 
-  <section>
-    <h2>드시기 전에 <small>공식 안내 그대로</small></h2>
-    <ul class="care">
-      <li>우유·대두·밀을 함유합니다. 특이체질·알레르기 체질은 원료를 확인한 뒤 드셔 주세요.</li>
-      <li>당알코올이 들어 있어 많이 드시면 설사를 일으킬 수 있습니다. 이상이 있으면 중단하고 전문가와 상담하세요.</li>
-      <li>높은 온도·습도에서 굳을 수 있으니 직사광선과 차 안을 피해 보관해 주세요.</li>
-    </ul>
-  </section>
-
-  <footer><span>써 보시고 판단해 주세요. 자세한 원료와 함량은 공식 제품 안내에 있습니다.</span><span>고객행복센터 1544-8580</span></footer>
+    <p class="fine"><b>효소식품</b> · 60g(2g×30포) · 제조 콜마비앤에이치 · 판매 애터미. 우유·대두·밀 함유. 당알코올이 들어 있어 많이 드시면 설사를 일으킬 수 있습니다. 특이체질·알레르기 체질은 원료를 확인하고 드세요. 직사광선과 차 안을 피해 보관하세요. 가격은 애터미 공식몰 표기(2026-11-15 확인, 쿠폰 적용 기준)이며 달라질 수 있습니다. 사진 출처 애터미 공식몰 · 자세한 내용 kr.atomy.com/product/000129 · 고객행복센터 1544-8580</p>
+  </div>
 </div>
 <div class="dl"><a href="finezyme.pdf">PDF로 받기</a></div>
+<script>
+document.querySelectorAll('.rise').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
+(function(){
+  const el=document.querySelector('[data-count]');
+  if(!el||matchMedia('(prefers-reduced-motion:reduce)').matches||matchMedia('print').matches)return;
+  const end=+el.dataset.count,unit=el.querySelector('small').outerHTML,t0=performance.now();
+  function f(t){const p=Math.min(1,(t-t0)/900),v=Math.round(end*(1-Math.pow(1-p,3)));el.innerHTML=v+unit;if(p<1)requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+})();
+</script>
 </body>
 </html>
